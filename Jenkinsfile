@@ -44,10 +44,9 @@ pipeline {
             steps {
                 sh """
                    printenv
-                   docker build -t ${IMAGE_NAME}
+                   docker build -t ${IMAGE_NAME} .
                    """
             }
         }
     }
-}
 }
