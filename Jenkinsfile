@@ -48,5 +48,13 @@ pipeline {
                    """
             }
         }
+        stage("Scan") {
+            steps {
+                sh """ 
+                   trivy image &{IMAGE_NAME} >> frontend-report.txt
+                   """
+                   }
+            }
+        }
     }
 }
