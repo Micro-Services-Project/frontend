@@ -54,7 +54,6 @@ pipeline {
                    trivy image &{IMAGE_NAME} >> frontend-report.txt
                    """
                    }
-            }
         }
     }
 }
