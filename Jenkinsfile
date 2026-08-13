@@ -22,8 +22,8 @@ pipeline {
                     withSonarQubeEnv('SonarQube') {
                         sh """
                             ${scannerHome}/bin/sonar-scanner \
-                            -Dsonar.projectKey=backend \
-                            -Dsonar.projectName=backend \
+                            -Dsonar.projectKey=frontend \
+                            -Dsonar.projectName=frontend \
                             -Dsonar.sources=.
                         """
                     }
