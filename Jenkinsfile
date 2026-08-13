@@ -19,7 +19,7 @@ pipeline {
                 script {
                     def scannerHome = tool 'Sonar'
 
-                    withSonarQubeEnv('SonarQube') {
+                    withSonarQubeEnv('Sonar') {
                         sh """
                             ${scannerHome}/bin/sonar-scanner \
                             -Dsonar.projectKey=frontend \
