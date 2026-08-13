@@ -30,6 +30,11 @@ pipeline {
                 }
             }
         }
+        stage("Quality Gate") {
+            steps {
+                waitForQualityGate abortPipeline: false, credentialsId: 'Sonar'
+            }
+        }
         stage("Run Unit Tests") {
             steps {
                 sh 'go test ./...'
