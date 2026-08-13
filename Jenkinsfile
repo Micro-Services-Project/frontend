@@ -14,5 +14,10 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/Micro-Services-Project/frontend.git'
             }
         }
+        stage("Run Unit Tests") {
+            steps {
+                sh 'go test ./...'
+            }
+        }
     }
 }
