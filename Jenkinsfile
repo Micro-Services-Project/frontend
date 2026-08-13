@@ -55,7 +55,7 @@ pipeline {
                    """
                    }
         }
-        stage ("push Image) {
+        stage ("push Image") {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'Docker') {
