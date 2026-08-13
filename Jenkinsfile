@@ -55,5 +55,15 @@ pipeline {
                    """
                    }
         }
+        stage {
+            steps {
+                script {
+                    withDockerRegistry(credentialsId: 'Docker') {
+                        sh """
+                           docker push ${IMAGE_NAME}
+                           """
+                }
+            }
+        }
     }
 }
